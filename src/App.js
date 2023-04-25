@@ -32,6 +32,8 @@ function AlertUserTwo(){
 function AlertUserThree(){
   alert(userThree.nav)
 }
+// const userDetail = [userOne, userTwo,userThree]
+
  
 return (
 <div className="App">
@@ -47,8 +49,12 @@ return (
 <Productcard
   userDetail = {userThree}
   alertFunction={AlertUserThree}
+  />
+
+  {/* [userOne, userTwo, puserThree].map  userDetail => (
+		<h4 key={number}>userDetail = {userDetail}</h4>*/}
+
   
-/>
 </div>     
   );
 }
