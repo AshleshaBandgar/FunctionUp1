@@ -1,61 +1,33 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
-import Productcard from './components/product';
+import { useState } from 'react';
+import Form from './components/form';
 
 
 function App() {
-const userOne = {
-  image :"https://images.pexels.com/photos/1407354/pexels-photo-1407354.jpeg?auto=compress&cs=tinysrgb&w=600",
-  nav:'WOODLAND',
-  details:"garnier pure active micellure",
-  price:"$70"
-}
 
-const userTwo = {
-  image :"https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&w=600",
-  nav:'NIKE',
-  details:"Latest collection",
-  price:"$80"
-}
-const userThree = {
-  image :"https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=600",
-  nav:'BATA',
-  details:"Newest collection",
-  price:"$100"
-}
-function AlertUserOne(){
-  alert(userOne.nav)
-}
-function AlertUserTwo(){
-  alert(userTwo.nav)
-}
-function AlertUserThree(){
-  alert(userThree.nav)
-}
-// const userDetail = [userOne, userTwo,userThree]
+const [count, setCount] = useState(0)
 
+function handleIncrement(){
+  setCount(count+1)
+  
+};
+
+function HandleDecrement(){
+  if(count>0)
+  setCount(count-1)
+}
  
 return (
 <div className="App">
 
-<Productcard 
-  userDetail = {userOne}
-  alertFunction={AlertUserOne}
-/>
-<Productcard
-  userDetail = {userTwo}
-  alertFunction={AlertUserTwo}
-/>
-<Productcard
-  userDetail = {userThree}
-  alertFunction={AlertUserThree}
-  />
+<h3>Count is : {count}</h3>
+<button onClick={handleIncrement}>Increment</button>
+<button onClick={HandleDecrement}>decrement</button>
 
-  {/* [userOne, userTwo, puserThree].map  userDetail => (
-		<h4 key={number}>userDetail = {userDetail}</h4>*/}
+<Form/>
+</div> 
 
-  
-</div>     
   );
 }
 export default App;

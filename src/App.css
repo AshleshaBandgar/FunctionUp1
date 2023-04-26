@@ -1,7 +1,12 @@
 .App {
-  text-align: center;
+text-align: center;
 }
+.app-child{
 
+margin-left: 10px;
+display: flex;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
