@@ -1,32 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
-import { useState } from 'react';
-import Form from './components/form';
-
+import Luckynumbergame from './components/organisms/form/luckynumber';
 
 function App() {
 
-const [count, setCount] = useState(0)
-
-function handleIncrement(){
-  setCount(count+1)
-  
-};
-
-function HandleDecrement(){
-  if(count>0)
-  setCount(count-1)
-}
- 
 return (
-<div className="App">
 
-<h3>Count is : {count}</h3>
-<button onClick={handleIncrement}>Increment</button>
-<button onClick={HandleDecrement}>decrement</button>
+<div className="App" >
+<Luckynumbergame/>
 
-<Form/>
-</div> 
+</div>
+
 
   );
 }

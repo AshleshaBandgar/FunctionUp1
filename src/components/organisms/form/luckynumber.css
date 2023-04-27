@@ -1,0 +1,23 @@
+.form{
+    
+    display: flex;
+    flex-direction: column;
+    color: brown;
+    gap: 20px;
+}
+
+.inputField{
+
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.submitBtn{
+    background-color: rgb(206, 60, 60);
+    color:white;
+    border: none;
+    height:30px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
