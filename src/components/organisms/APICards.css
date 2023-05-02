@@ -1,0 +1,36 @@
+.card-number{
+    border: 0.1px solid;
+}
+
+.card-author{
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 0;
+    text-transform: uppercase;
+}
+.card-title{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    line-height: 60px;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+.card-media{
+    height: 110px;
+    width: 150px;
+}
+.card-container{
+    
+    justify-content: space-evenly;
+    
+}
+.card{
+  
+    border: 1px solid;
+    height: 300px;
+    width: 170px;
+    justify-content: flex-start;
+    justify-content: space-evenly;
+    
+}
