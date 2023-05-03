@@ -1,4 +1,4 @@
-.card-number{
+/* .card-number{
     border: 0.1px solid;
 }
 
@@ -33,4 +33,9 @@
     justify-content: flex-start;
     justify-content: space-evenly;
     
+} */
+.wrapper{
+    border: 1px solid blue;
+    width: 210px;
+    background-color: bisque;
 }

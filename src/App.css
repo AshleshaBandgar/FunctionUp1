@@ -1,17 +1,17 @@
 .App {
 text-align: center;
 display: flex;
-gap: 15px;
+gap: 15px; 
 
 }
-.food-container{
+/* .food-container{
   color: white;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 15px;
-}
+} */
 .titile{
   text-decoration:underline;
   color:red;
