@@ -1,30 +1,30 @@
 import React from 'react';
-import './App.css';
-import APICards from './components/organisms/APICards';
-import {useState} from 'react'
+import{ useEffect, useState } from 'react';
+import axios from 'axios';
+import Axios from './components/organisms/Axios';
 
-export default function App() {
+export default function App(){
+  
+  const [user, setUser] = useState([]) 
 
-  const [user, setUser] = useState([])
-
-  async function handleAPI(){
-      const response = await fetch('https://reqres.in/api/users/')
-      const userData = await response.json()
-      setUser(userData.data)
-      console.log(userData.data)
+  async function AxiosCards(){
+    const response = await axios.get('https://reqres.in/api/users/')
+    const userData = await response.data
+    setUser(userData.data)
+    
   }
-  
-  return (
-  
-       <div>
-       <button onClick={handleAPI}>Get User</button>
-  
-       <div className="App">
-  {
-    user.map((userData) => <APICards userData={userData} key ={userData.id}/>)
-  }
-  
-  </div>
-  </div>
-  );
+ useEffect(()=>{
+ AxiosCards();
+},[])
+
+return (
+<div>  
+  <div className="App">
+{
+user.map((userData) => <Axios userData={userData} key ={userData.id}/>)
 }
+
+</div>
+ 
+</div>
+ )}
