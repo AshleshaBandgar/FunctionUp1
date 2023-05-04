@@ -1,30 +1,32 @@
-import React from 'react';
-import{ useEffect, useState } from 'react';
-import axios from 'axios';
-import Axios from './components/organisms/Axios';
+import React from 'react'
+import axios from 'axios'
+import {useEffect, useState} from 'react'
 
 export default function App(){
+
+  const [axiosData, setAxiosData] = useState([])
+  // const [count, setCount] = useState(0)
+     
+  async function Axios(){
+    // setCount(count+1)
+    const res = await axios.get('https://dog.ceo/api/breeds/image/random')
+    const data = await res.data
+    console.log(data)
+    setAxiosData(data)
   
-  const [user, setUser] = useState([]) 
-
-  async function AxiosCards(){
-    const response = await axios.get('https://reqres.in/api/users/')
-    const userData = await response.data
-    setUser(userData.data)
-    
   }
- useEffect(()=>{
- AxiosCards();
-},[])
-
 return (
-<div>  
-  <div className="App">
-{
-user.map((userData) => <Axios userData={userData} key ={userData.id}/>)
+    <div>
+    
+       <img src = {axiosData.message} alt = "" 
+        height = "150px"
+        width = "150px"
+       />
+      
+       <button onClick ={Axios}>Click</button>
+       <br/>
+       
+    </div>
+  )
 }
 
-</div>
- 
-</div>
- )}
