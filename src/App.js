@@ -1,31 +1,43 @@
 import React from 'react'
 import axios from 'axios'
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 
 export default function App(){
 
-  const [axiosData, setAxiosData] = useState([])
-  // const [count, setCount] = useState(0)
-     
-  async function Axios(){
-    // setCount(count+1)
-    const res = await axios.get('https://dog.ceo/api/breeds/image/random')
-    const data = await res.data
-    console.log(data)
-    setAxiosData(data)
+  const [number, setNumber] = useState(' ')
+  const [otp, setOtp] = useState(' ')
+
+   function valid(){
+
+    const validiateMyNumber = /^[6-9]\d{99}$/.test(number)
+    if(!validiateMyNumber){
+      setOtp(" please check your number")
+    }else{
+      setOtp(" message sent succesfully")
+      setNumber(" ")
+    }}
+  function getOtp(){
+   axios.post('https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP',{
+     mobile : `${number}`
+   })
   
+     .then((data)=>setNumber(data.number)) 
+     .catch(error=>console.log(error)) 
+     valid()
   }
+  
 return (
     <div>
     
-       <img src = {axiosData.message} alt = "" 
-        height = "150px"
-        width = "150px"
-       />
+    <input placeholder = "Enter mobile number"
+           type = "number"
+           onChange={(e)=>{setNumber(e.target.value)}}
+           value={number}
+
+    />
+    <br/>
+    <button onClick={getOtp}>Get OTP</button>
       
-       <button onClick ={Axios}>Click</button>
-       <br/>
-       
     </div>
   )
 }
