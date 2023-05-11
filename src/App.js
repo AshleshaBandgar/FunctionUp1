@@ -1,14 +1,13 @@
+import React from 'react'
+import './App.css'
+import TicTacToe from './components/organisms/tic tac toe'
 
-import styles from './App.module.css'
-import Scrollbar from './components/scrollbar/scrollbar';
+export default function App(){
+  return (
+  <div>
+    
+    <TicTacToe/>
 
-function App() {
-
-return(
-    <div className={styles.App}>
-        <Scrollbar/>
-    </div>
-  );
+  </div>
+  )
 }
-
-export default App;
