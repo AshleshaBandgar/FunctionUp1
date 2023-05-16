@@ -15,7 +15,7 @@ export default function ListCombo(props){
   return (
     <div style={headingStyle}>
        <span onClick={cutIt}><DeleteIcon className="deleteIcon"/></span>
-       <li style={{ textDecoration: line ? "line-through" : "none"}}> {props.text} </li>
+       <li> {props.text} </li>
 
     </div>
   
