@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
-import ToDoList from './components/organisms/ToDoList'
+import AddNewUser from './components/organisms/AddNewUser'
 
 export default function App(){
  
 return (
   
    <div className="app">
-    <ToDoList/>
+    <AddNewUser/>
    </div>
 )
 }
