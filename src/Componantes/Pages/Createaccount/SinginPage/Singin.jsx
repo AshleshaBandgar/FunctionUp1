@@ -16,9 +16,9 @@ const Singin = () => {
     const navigate = useNavigate();
     
 
-    const userName = localStorage.getItem('name') ? localStorage.getItem('name') : 'ashlesha'
-    const userEmail = localStorage.getItem("email") ? localStorage.getItem("email") : "demo@gmail.com"
-    const userPhone = localStorage.getItem("phone") ? localStorage.getItem("phone") : "123456789"
+    const userName = localStorage.getItem('name')
+    const userEmail = localStorage.getItem("phone") 
+    const userPhone = localStorage.getItem("email") 
 
 
     const handleClick = (e) => {

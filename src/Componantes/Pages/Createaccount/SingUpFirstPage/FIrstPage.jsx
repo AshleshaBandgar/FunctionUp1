@@ -14,9 +14,17 @@ const Custemize = () => {
   const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [details, setDetails] = useState("")
+
 
   function HandleClick(e) {
     e.preventDefault();
+    const oldDetails=[...details,{
+      name:name,
+      phone:phone,
+      email:email,
+      password:password
+    }]
     if (name === "") {
       alert("name is required")
     }
@@ -28,14 +36,19 @@ const Custemize = () => {
     else if (password === "") {
       alert("password is required")
     } else {
-      localStorage.setItem('name', name)
-      localStorage.setItem('phone', phone)
-      localStorage.setItem('email', email)
-      localStorage.setItem('password', password)
+      localStorage.setItem('details', JSON.stringify(oldDetails))
+      setDetails(oldDetails)
       alert("Registered Successfully")
     }
+    setDetails(oldDetails);
+    setName("")
+    setPhone("")
+    setEmail("")
+    setPassword("")
+    console.log(oldDetails)
 
   }
+  
 
   return (
     <>

@@ -9,7 +9,8 @@
 // import {BrowserRouter , Routes, Route } from "react-router-dom";
 
 
-import SideBar from "./SideBar/SideBar";
+import MainPage from "./Fetch data/MainPage";
+// import SideBar from "./SideBar/SideBar";
 
 
 
@@ -30,7 +31,8 @@ function App() {
      </Routes>
   
      </BrowserRouter> */}
-     <SideBar/><br/>
+     {/* <SideBar/><br/> */}
+     <MainPage/>
      
      
     </div>

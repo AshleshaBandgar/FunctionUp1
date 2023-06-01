@@ -37,7 +37,7 @@ export default function SideBar() {
                     </li>
                     <li>
 
-                        <FaRegBell className={styles.icons} /> Notifications
+                        <FaRegBell className={styles.icons} /> Notification
 
                     </li>
                     <li>
